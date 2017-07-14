@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <div class="trackDatetime zz-datetimeWrap">
+    <div class="trackDatetime ">
         <input text="text" class="datetimeInput zz-datetime">
         <span class="add-on datetimeBtn">
             <i class="icon-th"></i>
@@ -19,5 +19,11 @@
     
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="frame.js"></script>
+    <script>
+        $(".datetimeBtn").click(function(){
+            var dp = new datepicker();
+            dp.init();
+        });
+    </script>
 </body>
 </html>

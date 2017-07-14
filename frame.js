@@ -1,4 +1,4 @@
-$(function () {
+(function () {
     var datepicker = function () {
         var today,//默认为今天的日期
             y,//当前的年份
@@ -176,8 +176,5 @@ $(function () {
         };
     };
     window.datepicker=datepicker;
-    $(".datetimeBtn").click(function(){
-        var dp = new datepicker();
-        dp.init();
-    });
-});
+
+})();
