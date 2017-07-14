@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff;
+}
+.dropdown-menu{
+    position:absolute;
+    right: 20px;
+    top: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.datetimepicker {
+    padding: 4px;
+    margin-top: 1px;
+    border-radius: 4px;
+    display:none;
+}
+.datetimepicker table tr td.old, .datetimepicker table tr td.new {
+    color: #999;
+}
+.datetimepicker thead tr:first-child th, .datetimepicker tfoot th ,.datetimepicker tbody td{
+    cursor: pointer;
+}
+.datetimepicker th.switch {
+    width: 145px;
+}
+.datetimepicker td, .datetimepicker th {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 0;
+}
+.table-condensed th, .table-condensed td {
+    padding: 4px 5px;
+}
+.glyphicon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url(http://lbsyun.baidu.com/trace/admin/static/bootstrap/img/glyphicons-halflings_d4fef52.png);
+    background-repeat: no-repeat
+}
+.icon-arrow-left{
+    background-position: -240px -96px;
+}
+.icon-arrow-right{
+    background-position: -264px -96px;
+}
+.datetimepicker table tr td.active.active {
+    background: no-repeat;
+    background-color: #2398ff!important;
+}
+
+/******input*****/
+.trackDatetime{
+    height: 33px;
+    width: 320px;
+    margin-top: 12px;
+    position: relative;
+}
+.datetimeInput {
+    width: 240px;
+    margin-left: 15px;
+    display: block;
+    height: 29px;
+    color: #999;
+    font-size: 12px;
+    padding: 0;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    float: left;
+    padding-right: 35px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+.datetimeBtn {
+    position: absolute;
+    right: 30px;
+    border: 0;
+    top: 12px;
+    background: url(http://lbsyun.baidu.com/trace/admin/static/images/nextpageoff_b9e2d70.png);
+    height: 7px;
+    width: 12px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    z-index: 100;
+}
+.icon-th{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url(http://lbsyun.baidu.com/trace/admin/static/bootstrap/img/glyphicons-halflings_d4fef52.png);
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
