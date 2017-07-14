@@ -10,16 +10,17 @@ $(function () {
             nowDate, //当前月份日期
             nowMd,//当前月份最后一天
             cddays = [];//日历数据
-        this.init = function (callback) {//选择完日期后需要完成回调
+        this.init = function () {//选择完日期后需要完成回调
             today = new Date();
             y = today.getFullYear();
             m = today.getMonth();
             da = today.getDate();
-            $(".datetimepicker").css("display","block");
+            $(".datetimepicker").remove();
+            setBase();
+            //$(".datetimepicker").css("display","block");
             setDateDt(y, m);
-            show(callback);
+            show(afterPick);
         }
-        
         var bind=function(callback){
             $(".datetimepicker-days table tbody td").click(function(){//选择某一天
                 var $this=$(this);
@@ -27,7 +28,8 @@ $(function () {
                 var year=y;
                 var month=$this.hasClass("old") ? m:($this.hasClass("new")?m+2:m+1);
                 var dateStr=year+"-"+month+"-"+date;
-                $(".datetimepicker").css("display","none");
+                //$(".datetimepicker").css("display","none");
+                $(".datetimepicker").remove();
                 callback(dateStr);
             });
             $(".datetimepicker-days table .today").click(function(){//选择当天
@@ -36,7 +38,8 @@ $(function () {
                 var year=y;
                 var month=m+1;
                 var dateStr=year+"-"+month+"-"+date;
-                $(".datetimepicker").css("display","none");
+                //$(".datetimepicker").css("display","none");
+                $(".datetimepicker").remove();
                 callback(dateStr);
             });
             $(".datetimepicker-days table .prev").click(function(){//上一个月
@@ -159,11 +162,22 @@ $(function () {
                 </tfoot>`;
             return tfootHtml;
          };
+        var setBase=function(){
+            var htmlStr=`<div class="datetimepicker dropdown-menu">
+                            <div class="datetimepicker-days">
+                            </div>
+                        </div>`;
+            $(".zz-datetime").parent().append(htmlStr);
+            
+            console.log($(".zz-datetime").html());
+        };
+        var afterPick=function(date){
+            $(".zz-datetime").val(date);
+        };
     };
+    window.datepicker=datepicker;
     $(".datetimeBtn").click(function(){
         var dp = new datepicker();
-        dp.init(function(date){
-            $(".datetimeInput").val(date);
-        });
+        dp.init();
     });
 });

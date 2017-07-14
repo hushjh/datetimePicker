@@ -12,12 +12,13 @@ body {
     top: 30px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    background-color: #fff;
 }
 .datetimepicker {
     padding: 4px;
     margin-top: 1px;
     border-radius: 4px;
-    display:none;
 }
 .datetimepicker table tr td.old, .datetimepicker table tr td.new {
     color: #999;
